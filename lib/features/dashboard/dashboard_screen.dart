@@ -75,6 +75,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                           width: 44,
                           height: 44,
                           margin: const EdgeInsets.only(right: 14),
+                          padding: const EdgeInsets.all(5.0),
                           decoration: BoxDecoration(
                             shape: BoxShape.circle,
                             border: Border.all(
@@ -82,23 +83,9 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                               width: 1.5,
                             ),
                           ),
-                          child: Center(
-                            child: Stack(
-                              alignment: Alignment.center,
-                              children: [
-                                Icon(
-                                  Icons.sync,
-                                  size: 28,
-                                  color: CyberTheme.electricBlue.withOpacity(0.35),
-                                ).animate(onPlay: (controller) => controller.repeat())
-                                 .rotate(duration: 6.seconds),
-                                const Icon(
-                                  Icons.waves,
-                                  size: 16,
-                                  color: CyberTheme.neonPink,
-                                ),
-                              ],
-                            ),
+                          child: Image.asset(
+                            'assets/icon/app_icon.png',
+                            fit: BoxFit.contain,
                           ),
                         ),
                         Column(

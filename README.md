@@ -13,22 +13,33 @@ Async is a real-time, low-latency audio sharing application built with Flutter. 
 
 ---
 
-## 📱 Android Installation
+## 📱 Android Installation & Downloads
 
-### 1. Pre-built APK Download
-We have pre-compiled a debug build for you:
-- **Location**: [app-debug.apk](file:///Users/arun/Documents/code/Async/releases/app-debug.apk) (inside the `/releases` folder of this repository).
+### 📥 Latest Pre-built APKs (v1.0.0)
 
-### 2. Install via ADB
-If you have a device connected to your computer via USB debugging, install it immediately:
+| Architecture | Download Link | Description | File Size |
+| :--- | :--- | :--- | :--- |
+| **ARM64-v8a** (Recommended) | [Async_v1.0.0_arm64-v8a.apk](file:///Users/arun/Documents/code/Async/releases/Async_v1.0.0_arm64-v8a.apk) | For modern Android phones (most devices). | **26.9 MB** |
+| **ARMEABI-v7a** | [Async_v1.0.0_armeabi-v7a.apk](file:///Users/arun/Documents/code/Async/releases/Async_v1.0.0_armeabi-v7a.apk) | For older 32-bit Android phones. | **23.0 MB** |
+| **x86_64** | [Async_v1.0.0_x86_64.apk](file:///Users/arun/Documents/code/Async/releases/Async_v1.0.0_x86_64.apk) | For Android simulators/emulators. | **29.6 MB** |
+
+### 🛠️ Installation Methods
+
+#### Option A: Quick Install via ADB (Command Line)
+If your Android device is connected to your computer via USB debugging:
 ```bash
-adb install -r releases/app-debug.apk
+# For modern phones (ARM64-v8a)
+adb install -r releases/Async_v1.0.0_arm64-v8a.apk
+
+# For older 32-bit phones (ARMEABI-v7a)
+adb install -r releases/Async_v1.0.0_armeabi-v7a.apk
 ```
 
-### 3. Install Manually
-1. Transfer the `app-debug.apk` to your Android device storage.
-2. Open any File Manager app on your Android device.
-3. Locate the `.apk` file, tap it, and allow "Install from Unknown Sources" if prompted by Android.
+#### Option B: Manual Installation
+1. Download the APK corresponding to your device architecture from the links above (ARM64-v8a is recommended for almost all physical phones).
+2. Transfer the `.apk` file to your Android device's internal storage.
+3. Open any **File Manager** app on your Android device.
+4. Locate the `.apk` file, tap it, and follow the on-screen instructions (allow "Install from Unknown Sources" if prompted by your system).
 
 ---
 

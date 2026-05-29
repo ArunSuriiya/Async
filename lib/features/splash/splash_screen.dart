@@ -90,24 +90,14 @@ class _SplashScreenState extends State<SplashScreen> {
                       ],
                     ),
                     child: Center(
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          Icon(
-                            Icons.sync,
-                            size: 65,
-                            color: CyberTheme.electricBlue.withOpacity(0.4),
-                          ).animate(onPlay: (controller) => controller.repeat())
-                           .rotate(duration: 6.seconds),
-                          Icon(
-                            Icons.waves,
-                            size: 35,
-                            color: CyberTheme.neonPink,
-                          ).animate(onPlay: (controller) => controller.repeat(reverse: true))
-                           .scale(begin: const Offset(0.8, 0.8), end: const Offset(1.1, 1.1), duration: 1.5.seconds)
-                           .fadeIn(duration: 1.seconds),
-                        ],
-                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(12.0),
+                        child: Image.asset(
+                          'assets/icon/app_icon.png',
+                          fit: BoxFit.contain,
+                        ),
+                      ).animate(onPlay: (controller) => controller.repeat(reverse: true))
+                       .scale(begin: const Offset(0.9, 0.9), end: const Offset(1.1, 1.1), duration: 2.seconds),
                     ),
                   ).animate()
                    .scale(duration: 800.ms, curve: Curves.easeOutBack)
