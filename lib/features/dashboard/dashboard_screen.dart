@@ -69,27 +69,61 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
+                    Row(
                       children: [
-                        const Text(
-                          'ASYNC',
-                          style: TextStyle(
-                            fontFamily: 'Outfit',
-                            fontSize: 32,
-                            fontWeight: FontWeight.w900,
-                            letterSpacing: 4,
-                            color: Colors.white,
+                        Container(
+                          width: 44,
+                          height: 44,
+                          margin: const EdgeInsets.only(right: 14),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: CyberTheme.electricBlue.withOpacity(0.7),
+                              width: 1.5,
+                            ),
+                          ),
+                          child: Center(
+                            child: Stack(
+                              alignment: Alignment.center,
+                              children: [
+                                Icon(
+                                  Icons.sync,
+                                  size: 28,
+                                  color: CyberTheme.electricBlue.withOpacity(0.35),
+                                ).animate(onPlay: (controller) => controller.repeat())
+                                 .rotate(duration: 6.seconds),
+                                const Icon(
+                                  Icons.waves,
+                                  size: 16,
+                                  color: CyberTheme.neonPink,
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                        Text(
-                          'One Beat. Multiple Devices.',
-                          style: TextStyle(
-                            fontFamily: 'Inter',
-                            fontSize: 12,
-                            color: Colors.white.withOpacity(0.5),
-                            letterSpacing: 0.5,
-                          ),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            const Text(
+                              'ASYNC',
+                              style: TextStyle(
+                                fontFamily: 'Outfit',
+                                fontSize: 32,
+                                fontWeight: FontWeight.w900,
+                                letterSpacing: 4,
+                                color: Colors.white,
+                              ),
+                            ),
+                            Text(
+                              'One Beat. Multiple Devices.',
+                              style: TextStyle(
+                                fontFamily: 'Inter',
+                                fontSize: 12,
+                                color: Colors.white.withOpacity(0.5),
+                                letterSpacing: 0.5,
+                              ),
+                            ),
+                          ],
                         ),
                       ],
                     ),
