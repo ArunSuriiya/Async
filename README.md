@@ -15,31 +15,36 @@ Async is a real-time, low-latency audio sharing application built with Flutter. 
 
 ## 📱 Android Installation & Downloads
 
-### 📥 Latest Pre-built APKs (v1.0.0)
+### 📥 Download Async v1.0.0 — Choose your device:
 
-| Architecture | Download Link | Description | File Size |
-| :--- | :--- | :--- | :--- |
-| **ARM64-v8a** (Recommended) | [Async_v1.0.0_arm64-v8a.apk](file:///Users/arun/Documents/code/Async/releases/Async_v1.0.0_arm64-v8a.apk) | For modern Android phones (most devices). | **26.9 MB** |
-| **ARMEABI-v7a** | [Async_v1.0.0_armeabi-v7a.apk](file:///Users/arun/Documents/code/Async/releases/Async_v1.0.0_armeabi-v7a.apk) | For older 32-bit Android phones. | **23.0 MB** |
-| **x86_64** | [Async_v1.0.0_x86_64.apk](file:///Users/arun/Documents/code/Async/releases/Async_v1.0.0_x86_64.apk) | For Android simulators/emulators. | **29.6 MB** |
+> **ℹ️ Not sure which to pick?** Download **ARM64-v8a** — it works on virtually all modern Android phones (2016 and newer).
 
-### 🛠️ Installation Methods
+| | Architecture | Direct Download | For | Size |
+|---|---|---|---|---|
+| ⭐ | **ARM64-v8a** *(Recommended)* | [⬇️ Download APK](https://github.com/ArunSuriiya/Async/raw/main/releases/Async_v1.0.0_arm64-v8a.apk) | Modern phones (most devices) | 26.9 MB |
+| | **ARMEABI-v7a** | [⬇️ Download APK](https://github.com/ArunSuriiya/Async/raw/main/releases/Async_v1.0.0_armeabi-v7a.apk) | Older 32-bit phones | 23.0 MB |
+| | **x86_64** | [⬇️ Download APK](https://github.com/ArunSuriiya/Async/raw/main/releases/Async_v1.0.0_x86_64.apk) | Android emulators/simulators | 29.6 MB |
 
-#### Option A: Quick Install via ADB (Command Line)
-If your Android device is connected to your computer via USB debugging:
+### 🛠️ How to Install
+
+#### Option A: Tap to install directly on your phone
+1. Open this GitHub page on your Android phone's browser.
+2. Tap the **⬇️ Download APK** link above (choose ARM64-v8a if unsure).
+3. Once downloaded, tap the file in your notifications or Downloads app.
+4. If prompted, enable **"Install from Unknown Sources"** in settings and tap **Install**.
+
+#### Option B: Install via ADB (from your computer)
 ```bash
-# For modern phones (ARM64-v8a)
+# Clone the repo first (or just download the releases/ folder)
+git clone https://github.com/ArunSuriiya/Async.git
+cd Async
+
+# For modern phones (ARM64-v8a) — recommended
 adb install -r releases/Async_v1.0.0_arm64-v8a.apk
 
-# For older 32-bit phones (ARMEABI-v7a)
+# For older 32-bit phones
 adb install -r releases/Async_v1.0.0_armeabi-v7a.apk
 ```
-
-#### Option B: Manual Installation
-1. Download the APK corresponding to your device architecture from the links above (ARM64-v8a is recommended for almost all physical phones).
-2. Transfer the `.apk` file to your Android device's internal storage.
-3. Open any **File Manager** app on your Android device.
-4. Locate the `.apk` file, tap it, and follow the on-screen instructions (allow "Install from Unknown Sources" if prompted by your system).
 
 ---
 
